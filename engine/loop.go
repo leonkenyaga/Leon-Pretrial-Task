@@ -31,16 +31,16 @@ func Loop(ctx context.Context, en EngineIsh, reader io.Reader, writer io.Writer)
 	for running {
 		in, err := bufReader.ReadString('\n')
 		if err == io.EOF {
-			Logg.DebugCtxf(ctx, "EOF found, that's all folks")
+			Logg.DebugCtxf(ctx, "Umefika Mwisho")
 			return nil
 		}
 		if err != nil {
-			return fmt.Errorf("cannot read input: %v\n", err)
+			return fmt.Errorf("Haiwezi kusoma pembejeo: %v\n", "Pembejeo haujafuatilia muundo wa /^[a-zA-Z0-9].*$/")
 		}
 		in = strings.TrimSpace(in)
 		running, err = en.Exec(ctx, []byte(in))
 		if err != nil {
-			return fmt.Errorf("unexpected termination: %v\n", err)
+			return fmt.Errorf("Kukatika bila kutarajiwa: %v\n", "Pembejeo haujafuatilia muundo wa /^[a-zA-Z0-9].*$/")
 		}
 		_, err = en.WriteResult(ctx, writer)
 		if err != nil {

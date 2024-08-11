@@ -39,10 +39,8 @@ func newintroResource() introResource {
 // increment counter.
 // return a string representing the current value of the counter.
 func(c *introResource) count(ctx context.Context, sym string, input []byte) (resource.Result, error) {
-	s := "%v time"
-	if c.c != 1 {
-		s += "s"
-	}
+	s := "mara %v"
+
 	r := resource.Result{
 		Content: fmt.Sprintf(s, c.c),
 	}
@@ -72,7 +70,7 @@ func main() {
 	flag.StringVar(&root, "root", "root", "entry point symbol")
 	flag.StringVar(&sessionId, "session-id", "default", "session id")
 	flag.Parse()
-	fmt.Fprintf(os.Stderr, "starting session at symbol '%s' using resource dir: %s\n", root, dir)
+	fmt.Fprintf(os.Stderr, "mwanzo wa kikao kwa ishara '%s' kwa kutumia rasilimali katika saraka ya: %s\n", root, dir)
 
 	st := state.NewState(3)
 	rs := newintroResource()
@@ -95,7 +93,7 @@ func main() {
 
 	err = engine.Loop(ctx, &en, os.Stdin, os.Stdout)
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "loop exited with error: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Kitanzi kimemalizika kwa kosa: %v\n", err)
 		os.Exit(1)
 	}
 }
