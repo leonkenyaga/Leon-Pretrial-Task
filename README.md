@@ -4,34 +4,34 @@ Consider the following interaction:
 
 
 ```
-This is the root page
-You have visited 1 time.
+Huu ndio Ukurasa wa kwanza
+Umeutembelea mara 1.
 0:foo
 1:bar
 
 $ 1
-Please visit foo first.
-Any input to return.
+Tafadhali Tembelea Ukurasa wa foo Kwanza.
+Kurudisha Pembejeo yoyote.
 
 $ x
-This is the root page.
-You have visited 2 times.
+Huu ndio Ukurasa wa kwanza
+Umeutembelea mara 2.
 0:foo
 1:bar
 
 $ 0
-Welcome to page foo.
-Please write seomthing.
+Karibu katika Ukurasa wa foo.
+Tafadhali Andika Kitu.
 
 $ blah blah blah
-This is the root page.
-You have visited 3 times.
+Huu ndio Ukurasa wa kwanza
+Umeutembelea mara 3.
 0:foo
 1:bar
 
 $ 1
-Thanks for visiting foo and bar.
-You have written:
+Asante kwa kutembele Kurasa za foo na bar.
+Umeandika:
 blah blah blah
 ```
 
@@ -70,16 +70,16 @@ You have visited {{.count}}.
 ### foo
 
 ```
-Welcome to page foo.
-Please write something.
+Karibu katika Ukurasa wa foo.
+Tafadhali Andika Kitu.
 ```
 
 
 ### bar
 
 ```
-Thanks for visiting foo and bar.
-You have written:
+Asante kwa kutembele Kurasa za foo na bar.
+Umeandika:
 {{.something}}
 ```
 
@@ -87,8 +87,8 @@ You have written:
 ### ouch
 
 ```
-Please visit foo first.
-Any input to return.
+Tafadhali Tembelea Ukurasa wa foo Kwanza.
+Kurudisha Pembejeo yoyote.
 ```
 
 
