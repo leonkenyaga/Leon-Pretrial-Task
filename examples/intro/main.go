@@ -81,6 +81,7 @@ func main() {
 		Root: "root",
 		SessionId: sessionId,
 		OutputSize: uint32(size),
+		Language: "sw",
 	}
 	ctx := context.Background()
 	en := engine.NewEngine(ctx, cfg, &st, rs, ca)
